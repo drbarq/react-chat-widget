@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+const handoffLogo = 'https://imageshandoff.s3.amazonaws.com/Facebook_Profile2.png'
+
 import openLauncher from '@assets/launcher_button.svg';
 import close from '@assets/clear-button.svg';
 import Badge from './components/Badge';
@@ -12,7 +14,7 @@ const Launcher = ({ toggle, chatOpened, badge }) =>
     <Badge badge={badge} />
     {chatOpened ?
       <img src={close} className="rcw-close-launcher" alt="" /> :
-      <img src={openLauncher} className="rcw-open-launcher" alt="" />
+      <img src={handoffLogo} className="rcw-open-launcher" alt="" />
     }
   </button>;
 
