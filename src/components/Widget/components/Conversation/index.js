@@ -8,10 +8,7 @@ import QuickButtons from './components/QuickButtons';
 import './style.scss';
 
 import CheckoutForm from './components/Sender/stripe';
-import {Elements} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
 
-const stripePromise = loadStripe('pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG');
 
 const Conversation = props => (
   <div className={`rcw-conversation-container ${props.className}`}>
