@@ -7,7 +7,13 @@ import Sender from './components/Sender';
 import QuickButtons from './components/QuickButtons';
 import './style.scss';
 
-const Conversation = props =>
+import CheckoutForm from './components/Sender/stripe';
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG');
+
+const Conversation = props => (
   <div className={`rcw-conversation-container ${props.className}`}>
     <Header
       title={props.title}
@@ -16,17 +22,17 @@ const Conversation = props =>
       showCloseButton={props.showCloseButton}
       titleAvatar={props.titleAvatar}
     />
-    <Messages
-      profileAvatar={props.profileAvatar}
-    />
+    <Messages profileAvatar={props.profileAvatar} />
     <QuickButtons onQuickButtonClicked={props.onQuickButtonClicked} />
+    {/* <CheckoutForm /> */}
     <Sender
       sendMessage={props.sendMessage}
       placeholder={props.senderPlaceHolder}
       disabledInput={props.disabledInput}
       autofocus={props.autofocus}
     />
-  </div>;
+  </div>
+);
 
 Conversation.propTypes = {
   title: PropTypes.string,
@@ -38,7 +44,7 @@ Conversation.propTypes = {
   toggleChat: PropTypes.func,
   showCloseButton: PropTypes.bool,
   disabledInput: PropTypes.bool,
-  autofocus: PropTypes.bool
+  autofocus: PropTypes.bool,
 };
 
 export default Conversation;
