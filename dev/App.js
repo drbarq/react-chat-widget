@@ -45,11 +45,10 @@ export default class App extends Component {
 
   render() {
     return (
-      // <h1> hello</h1>
       <Widget
-        title="Bienvenido"
-        subtitle="Asistente virtual"
-        senderPlaceHolder="Escribe aquí ..."
+        title="Handoff"
+        subtitle="Alcohol Discovery. Delivered."
+        senderPlaceHolder=""
         handleNewUserMessage={this.handleNewUserMessage}
         handleQuickButtonClicked={this.handleQuickButtonClicked}
         badge={1}

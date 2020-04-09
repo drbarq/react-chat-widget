@@ -10,7 +10,6 @@ const stripePromise = loadStripe('pk_test_VbgWFicE7nr52ls60zXadLgt00GH9ByqrW');
 
 ReactDOM.render(
   <Elements stripe={stripePromise}>
-    {/* <CheckoutForm /> */}
     <App />
   </Elements>,
   document.getElementById('root'),
