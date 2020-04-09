@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import send from '@assets/send_button.svg';
+import CheckoutForm from './stripe'
 
 import './style.scss';
 
@@ -14,6 +15,8 @@ class Sender extends Component {
 
   render() {
     const {sendMessage, placeholder, disabledInput, autofocus} = this.props;
+
+    console.log("sendMessage, placeholder, disabledInput, autofocus", sendMessage, placeholder, disabledInput, autofocus)
     return (
       <form className="rcw-sender" onSubmit={sendMessage}>
         <input

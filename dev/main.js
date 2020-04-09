@@ -6,7 +6,7 @@ import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import CheckoutForm from '../src/components/Widget/components/Conversation/components/Sender/stripe';
 
-const stripePromise = loadStripe('pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG');
+const stripePromise = loadStripe('pk_test_VbgWFicE7nr52ls60zXadLgt00GH9ByqrW');
 
 ReactDOM.render(
   <Elements stripe={stripePromise}>
